@@ -1,15 +1,15 @@
-// singleton
-// Object.create
+// singleton when created through constructors
+// Object.create this is constructir creation of object
 
 // object literals
 
-const mySym = Symbol("key1")
+const mySym = Symbol("key1") //Symbol declaration
 
 
 const JsUser = {
-    name: "Hitesh",
-    "full name": "Hitesh Choudhary",
-    [mySym]: "mykey1",
+    name: "Hitesh", //Here name is tracked as string type
+    "full name": "Hitesh Choudhary", //These can't be accessed by the . rather by []
+    [mySym]: "mykey1",  //declaring symbol, sccessed by []
     age: 18,
     location: "Jaipur",
     email: "hitesh@google.com",
@@ -23,7 +23,7 @@ const JsUser = {
 // console.log(JsUser[mySym])
 
 JsUser.email = "hitesh@chatgpt.com"
-// Object.freeze(JsUser)
+// Object.freeze(JsUser) //If don't want to make changes 
 JsUser.email = "hitesh@microsoft.com"
 // console.log(JsUser);
 
@@ -34,5 +34,5 @@ JsUser.greetingTwo = function(){
     console.log(`Hello JS user, ${this.name}`);
 }
 
-console.log(JsUser.greeting());
+console.log(JsUser.greeting()); //will print the return value of function, here func. is not returning any value hence undefined + function call mein jo print ho raha hoga wo tho ho hi raha hai
 console.log(JsUser.greetingTwo());
