@@ -1,4 +1,4 @@
-//var c = 300
+//var c = 300  never used as var doesn't deals with scope
 let a = 300
 if (true) {
     let a = 10
@@ -51,7 +51,7 @@ function addone(num){
 }
 
 
-
+//can't call function if it's not declared yet here in this type declaration
 addTwo(5)
 const addTwo = function(num){
     return num + 2
