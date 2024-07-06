@@ -27,7 +27,7 @@ const result = addTwoNumbers(3, 5)
 // console.log("Result: ", result);
 
 
-function loginUserMessage(username = "sam"){
+function loginUserMessage(username = "sam"){ //setting default value when no value is paased during function call
     if(!username){
         console.log("PLease enter a username");
         return
@@ -39,9 +39,10 @@ function loginUserMessage(username = "sam"){
 // console.log(loginUserMessage("hitesh"))
 
 
-function calculateCartPrice(val1, val2, ...num1){
+function calculateCartPrice(val1, val2, ...num1){ //...num1 is rest operator[takes the rest of the values other than function parameters, used when we don't know how many values are passed in the call]
     return num1
 }
+//here num1 will have [500, 2000] as val1 takes 200 and val2 takes 400
 
 // console.log(calculateCartPrice(200, 400, 500, 2000))
 
@@ -54,7 +55,7 @@ function handleObject(anyobject){
     console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
 }
 
-// handleObject(user)
+// handleObject(user) //can pass creted objects/arrays too unlike java
 handleObject({
     username: "sam",
     price: 399
