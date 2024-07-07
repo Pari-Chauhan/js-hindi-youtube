@@ -10,6 +10,8 @@
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
+//It is an alternative of forEach when we want to return the values rather than just printing them or using them there onwards
+//In arrow functions if we don't {} then implicit return else need to return ourself
 // const newNums = myNums.filter( (num) => {
 //     return num > 4
 // } )
