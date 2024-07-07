@@ -1,4 +1,5 @@
-// for of
+// for of(used in array or string)
+//const map = new Map() (MAP DECLARATION)
 
 // ["", "", ""]
 // [{}, {}, {}]
