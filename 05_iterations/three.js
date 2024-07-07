@@ -1,5 +1,5 @@
-// for of (to traverse the ELEMENTS of array, map[both key and value], string)
-//for const key in (to traverse the keys and [] used to get the elements of arrays(indices), objects(keys), maps)
+// for of (to traverse the ELEMENTS of array, map[both key and value], string, not objects)
+//for const key in (to traverse the keys and [] used to get the elements of arrays(indices), objects(keys), not maps)
 
 // ["", "", ""]
 // [{}, {}, {}]
