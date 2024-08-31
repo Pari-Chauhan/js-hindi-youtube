@@ -21,7 +21,7 @@
 <script>
     // document.getElementById('owl').onclick = function(){
     //     alert("owl clicked")
-    // }
+    // }       // basic approach, best approach is using eventListener
 
      // attachEvent()
     // jQuery - on
@@ -31,6 +31,9 @@
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
 
+     // addeventListener takes 3 parameters - name, func, true/false 
+     // Below are the two examples to demonstrate the behaviour of the third parameter - even propagation - false->event bubbling(small comes first then big comes), true->event capturing(big comes first and then smaller comes)
+     // When we have two o/p associated with a single event then in false
     // document.getElementById('images').addEventListener('click', function(e){
     //     console.log("clicked inside the ul");
     // }, false)
@@ -38,7 +41,7 @@
     // document.getElementById('owl').addEventListener('click', function(e){
     //     console.log("owl clicked");
     //     e.stopPropagation()
-    // }, false)
+    // }, false)   -> stop propagation simply stops the bubbling i.e. no big after printing the small event
     
     // document.getElementById('google').addEventListener('click',function(e){
     //     e.preventDefault();
@@ -48,10 +51,10 @@
    
     
     document.querySelector('#images').addEventListener('click', function(e){
-        console.log(e.target.tagName);
+        console.log(e.target.tagName); //e.target gives the target of the particular event on ehich the event was actually carried out
         if (e.target.tagName === 'IMG') {
             console.log(e.target.id);
-            let removeIt = e.target.parentNode
+            let removeIt = e.target.parentNode //e.target here gives the image but we want the whole to be removed hence need the li which is the parent of the image
             removeIt.remove()
         }
     
